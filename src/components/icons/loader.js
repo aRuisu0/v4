@@ -1,6 +1,5 @@
 import React from 'react';
 import './loader.css'; //
-import 'ldrs/quantum';
 
 const IconLoader = () => {
   return (
