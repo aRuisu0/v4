@@ -44,7 +44,7 @@ const StyledCredit = styled.div`
   color: var(--light-slate);
   font-family: var(--font-mono);
   font-size: var(--fz-xxs);
-  line-height: 1;
+  line-height: 1.5;
 
   a {
     padding: 10px;
@@ -106,7 +106,8 @@ const Footer = () => {
 
       <StyledCredit tabindex="-1">
         <a href="https://github.com/bchiang7/v4">
-          <div>Designed &amp; Built by Brittany Chiang</div>
+          <div>Template by Brittany Chiang</div>
+          <div>Built by Adrian</div>
 
           {githubInfo.stars && githubInfo.forks && (
             <div className="github-stats">

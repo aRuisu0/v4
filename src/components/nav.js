@@ -9,6 +9,8 @@ import { useScrollDirection, usePrefersReducedMotion } from '@hooks';
 import { Menu } from '@components';
 import { IconLogo, IconHex } from '@components/icons';
 
+// background-color: rgba(10, 25, 47, 0.85);
+
 const StyledHeader = styled.header`
   ${({ theme }) => theme.mixins.flexBetween};
   position: fixed;
@@ -17,7 +19,9 @@ const StyledHeader = styled.header`
   padding: 0px 50px;
   width: 100%;
   height: var(--nav-height);
-  background-color: rgba(10, 25, 47, 0.85);
+  background-color:   var(--dark);
+  var(--dark);
+
   filter: none !important;
   pointer-events: auto !important;
   user-select: auto !important;
@@ -38,8 +42,8 @@ const StyledHeader = styled.header`
       css`
         height: var(--nav-scroll-height);
         transform: translateY(0px);
-        background-color: rgba(10, 25, 47, 0.85);
-        box-shadow: 0 10px 30px -10px var(--navy-shadow);
+        background-color:   var(--dark);
+        box-shadow: 0 10px 30px -10px var(dark-shadow);
       `};
 
     ${props =>
@@ -48,12 +52,56 @@ const StyledHeader = styled.header`
       css`
         height: var(--nav-scroll-height);
         transform: translateY(calc(var(--nav-scroll-height) * -1));
-        box-shadow: 0 10px 30px -10px var(--navy-shadow);
+        box-shadow: 0 10px 30px -10px var(dark-shadow);
       `};
   }
 `;
+  // .logo {
+  //   ${({ theme }) => theme.mixins.flexCenter};
 
-const StyledNav = styled.nav`
+  //   a {
+  //     color: var(--light-blue);
+  //     width: 42px;
+  //     height: 42px;
+  //     position: relative;
+  //     z-index: 1;
+
+  //     .hex-container {
+  //       position: absolute;
+  //       top: 0;
+  //       left: 0;
+  //       z-index: -1;
+  //       @media (prefers-reduced-motion: no-preference) {
+  //         transition: var(--transition);
+  //       }
+  //     }
+
+  //     .logo-container {
+  //       position: relative;
+  //       z-index: 1;
+  //       svg {
+  //         fill: none;
+  //         user-select: none;
+  //         @media (prefers-reduced-motion: no-preference) {
+  //           transition: var(--transition);
+  //         }
+  //         polygon {
+  //           fill: var(--dark);
+  //         }
+  //       }
+  //     }
+
+  //     &:hover,
+  //     &:focus {
+  //       outline: 0;
+  //       transform: translate(-4px, -4px);
+  //       .hex-container {
+  //         transform: translate(4px, 3px);
+  //       }
+  //     }
+  //   }
+  // }
+  const StyledNav = styled.nav`
   ${({ theme }) => theme.mixins.flexBetween};
   position: relative;
   width: 100%;
@@ -66,48 +114,48 @@ const StyledNav = styled.nav`
     ${({ theme }) => theme.mixins.flexCenter};
 
     a {
-      color: var(--green);
-      width: 42px;
-      height: 42px;
+      display: inline-block;
+      text-decoration: none;
+      text-decoration-skip-ink: auto;
+      color: inherit;
       position: relative;
+      transition: var(--transition);
       z-index: 1;
 
-      .hex-container {
+      &:after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 1px;
+        background: var(--light-blue);
         position: absolute;
-        top: 0;
+        bottom: -2px;
         left: 0;
-        z-index: -1;
-        @media (prefers-reduced-motion: no-preference) {
-          transition: var(--transition);
-        }
+        transform: scaleX(0);
+        transform-origin: bottom right;
+        transition: transform 0.25s ease-out;
       }
 
-      .logo-container {
-        position: relative;
-        z-index: 1;
-        svg {
-          fill: none;
-          user-select: none;
-          @media (prefers-reduced-motion: no-preference) {
-            transition: var(--transition);
-          }
-          polygon {
-            fill: var(--navy);
-          }
-        }
+      &:hover:after,
+      &:focus:after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
       }
 
       &:hover,
       &:focus {
-        outline: 0;
-        transform: translate(-4px, -4px);
-        .hex-container {
-          transform: translate(4px, 3px);
-        }
+        color: var(--light-blue);
       }
     }
   }
+
+  .logo-text {
+    font-family: var(--font-mono);
+    font-size: var(--fz-xxl);
+    letter-spacing: 4px;
+  }
 `;
+
 
 const StyledLinks = styled.div`
   display: flex;
@@ -135,7 +183,7 @@ const StyledLinks = styled.div`
         &:before {
           content: '0' counter(item) '.';
           margin-right: 5px;
-          color: var(--green);
+          color: var(--light-blue);
           font-size: var(--fz-xxs);
           text-align: right;
         }
@@ -181,25 +229,43 @@ const Nav = ({ isHome }) => {
   const fadeClass = isHome ? 'fade' : '';
   const fadeDownClass = isHome ? 'fadedown' : '';
 
+  // const Logo = (
+  //   <div className="logo" tabIndex="-1">
+  //     {isHome ? (
+  //       <a href="/" aria-label="home">
+  //         <div className="hex-container">
+  //           <IconHex />
+  //         </div>
+  //         <div className="logo-container">
+  //           <IconLogo />
+  //         </div>
+  //       </a>
+  //     ) : (
+  //       <Link to="/" aria-label="home">
+  //         <div className="hex-container">
+  //           <IconHex />
+  //         </div>
+  //         <div className="logo-container">
+  //           <IconLogo />
+  //         </div>
+  //       </Link>
+  //     )}
+  //   </div>
+  // );
+
   const Logo = (
     <div className="logo" tabIndex="-1">
       {isHome ? (
         <a href="/" aria-label="home">
-          <div className="hex-container">
-            <IconHex />
-          </div>
-          <div className="logo-container">
-            <IconLogo />
-          </div>
+          <div class="logo-text">ASR</div>
         </a>
       ) : (
         <Link to="/" aria-label="home">
-          <div className="hex-container">
-            <IconHex />
-          </div>
-          <div className="logo-container">
-            <IconLogo />
-          </div>
+          {
+            <a href="/" aria-label="home">
+              <div class="logo-text">ASR</div>
+            </a>
+          }
         </Link>
       )}
     </div>

@@ -1,14 +1,13 @@
 ---
-date: '2017-04-03'
-title: 'myNEU Redesign'
-github: 'https://github.com/bchiang7/Redesign-myNEU'
-external: 'https://bchiang7.github.io/Redesign-myNEU/'
+date: '2022-05-12'
+title: 'Video Game Development'
+github: 'https://github.com/CSC305/s22l/pull/58'
+external: 'https://github.com/CSC305/s22l/pull/58'
 tech:
-  - Jekyll
-  - SCSS
-  - JS
-company: 'Northeastern'
-showInProjects: false
+  - Python
+  - Pycharm
+  - Piskel
+showInProjects: true
 ---
 
-Student web portal prototype built after conducting multiple rounds of user testing that aimed to improve the current portal to provide students at Northeastern University with a better user experience.
+Worked on a student video game development of a team of 8 each assigned roles such as game physics, level, mechanic, item, and art designs.

@@ -19,7 +19,7 @@ const StyledHeroSection = styled.section`
 
   h1 {
     margin: 0 0 30px 4px;
-    color: var(--green);
+    color: var(--light-blue);
     font-family: var(--font-mono);
     font-size: clamp(var(--fz-sm), 5vw, var(--fz-md));
     font-weight: 400;
@@ -60,16 +60,16 @@ const Hero = () => {
   }, []);
 
   const one = <h1>Hi, my name is</h1>;
-  const two = <h2 className="big-heading">Brittany Chiang.</h2>;
-  const three = <h3 className="big-heading">I build things for the web.</h3>;
+  const two = <h2 className="big-heading">Adrian Sicaju-Ruiz</h2>;
+  const three = <h3 className="big-heading">I design and code</h3>;
   const four = (
     <>
       <p>
-        I’m a software engineer specializing in building (and occasionally designing) exceptional
-        digital experiences. Currently, I’m focused on building accessible, human-centered products
-        at{' '}
-        <a href="https://upstatement.com/" target="_blank" rel="noreferrer">
-          Upstatement
+      I'm a software engineer with a focus on enhancing user interfaces and overall user experience. Currently, I am
+      dedicated to firmware development where I design, test, and implement firmware updates tailored to customer needs and requirements at
+        {' '}
+        <a href="https://www.igt.com/" target="_blank" rel="noreferrer">
+          IGT Lottery
         </a>
         .
       </p>
@@ -78,10 +78,10 @@ const Hero = () => {
   const five = (
     <a
       className="email-link"
-      href="https://www.newline.co/courses/build-a-spotify-connected-app"
+      href="https://www.linkedin.com/in/adrian-sicaju-ruiz/"
       target="_blank"
       rel="noreferrer">
-      Check out my course!
+      Check out my Linkedin!
     </a>
   );
 
