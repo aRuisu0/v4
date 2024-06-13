@@ -61,15 +61,15 @@ const Hero = () => {
 
   const one = <h1>Hi, my name is</h1>;
   const two = <h2 className="big-heading">Adrian Sicaju-Ruiz</h2>;
-  const three = <h3 className="big-heading">I design and code</h3>;
+  const three = <h3 className="big-heading">I develop software.</h3>;
   const four = (
     <>
       <p>
-      I'm a software engineer with a focus on enhancing user interfaces and overall user experience. Currently, I am
-      dedicated to firmware development where I design, test, and implement firmware updates tailored to customer needs and requirements at
-        {' '}
+        My role as a software engineer is to focus on enhancing user interfaces and overall user
+        experience. Currently, I am dedicated to firmware development where I design, test, and
+        implement firmware updates tailored to customer needs and requirements at{' '}
         <a href="https://www.igt.com/" target="_blank" rel="noreferrer">
-          IGT Lottery
+          IGT
         </a>
         .
       </p>

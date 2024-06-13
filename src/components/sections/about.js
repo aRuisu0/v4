@@ -125,7 +125,16 @@ const About = () => {
     sr.reveal(revealContainer.current, srConfig());
   }, []);
 
-  const skills = ['JavaScript', 'React', 'Angular', 'Node.js', 'WordPress', 'C++/C', 'Python', 'Gentoo'];
+  const skills = [
+    'JavaScript',
+    'React',
+    'Angular',
+    'Node.js',
+    'WordPress',
+    'C++/C',
+    'Python',
+    'Gentoo',
+  ];
 
   return (
     <StyledAboutSection id="about" ref={revealContainer}>
@@ -135,17 +144,23 @@ const About = () => {
         <StyledText>
           <div>
             <p>
-            Hi, my name is Adrian. I've always been fascinated by technology and computers most of all. 
-            From dismantling my home computer to exploring hardware-software interactions, 
-            I've delved into emulators, simulators, hardware compatibility, dual-booting, and design.
+              My name is Adrian and I try to specialize in front-end developing. My interest started
+              back in 2020 when I took a software engineering course that allowed students to group
+              up and develop anything we wanted. I took on the role of front-end work that allowed
+              me to code and also express my creativity within the UI/UX area.
             </p>
 
             <p>
               Fast-forward to today, I’ve had the privilege of working at{' '}
-              <a href="https://www.igt.com/">a Lottery company </a>,{' '}
-              <a href="https://metcalfinstitute.org/">a Institute of Life and Sciences</a>, and{' '}
-              <a href="https://skillsforri.com/">a nonprofit partnership for students</a>,{' '}
-
+              <a href="https://www.igt.com/">at IGT </a>,{' '}
+              <a href="https://metcalfinstitute.org/">Metcalf Institute</a>, and{' '}
+              <a href="https://skillsforri.com/">Skills for RI</a>, My main focus today is firmware
+              development at{' '}
+              <a href="https://www.igt.com/" target="_blank" rel="noreferrer">
+                IGT
+              </a>{' '}
+              where I develop and create custom firmware for our customers based on their
+              requirements and needs.
             </p>
 
             <p>Here are a few technologies I’ve been working with recently:</p>
@@ -160,7 +175,7 @@ const About = () => {
           <div className="wrapper">
             <StaticImage
               className="img"
-              src="../../images/tmp.jpg"
+              src="../../images/profile.jpg"
               width={500}
               quality={95}
               formats={['AUTO', 'WEBP', 'AVIF']}

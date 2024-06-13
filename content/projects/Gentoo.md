@@ -11,7 +11,7 @@ tech:
   - C++
 
 company: 'IGT'
-showInProjects: false
+showInProjects: true
 ---
 
 Managed Gentoo OS migration on IGT Terminals, ensuring compatibility and providing documentation and training for successful adoption.

@@ -3,7 +3,7 @@ date: '2021-06-01'
 title: 'System Programmer Intern '
 company: 'Skills For RI'
 location: 'Providence, RI'
-range: 'June - August 2021'
+range: 'June 2021 - August 2021'
 url: 'https://skillsforri.com/'
 ---
 
